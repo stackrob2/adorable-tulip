@@ -1,0 +1,124 @@
+stackbitVersion: ~0.3.0
+ssgName: hugo
+publishDir: public
+dataDir: data
+pagesDir: content
+assets:
+  referenceType: static
+  staticDir: static
+  uploadDir: assets
+  publicPath: /
+cmsName: git
+models:
+  post:
+    type: page
+    label: Post
+    folder: posts
+    match:
+      - creating-a-new-theme.md
+      - dummy.pt-br.md
+      - migrate-from-jekyll.md
+    fields: []
+  post_1:
+    type: page
+    label: Post 1
+    folder: posts
+    match:
+      - external-post.md
+      - goisforlovers.md
+      - hugoisforlovers.md
+    fields:
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: string
+        name: externalLink
+        label: External Link
+      - type: list
+        name: series
+        label: Series
+        items:
+          type: string
+      - type: list
+        name: authors
+        label: Authors
+        items:
+          type: string
+      - type: image
+        name: featuredImage
+        label: Featured Image
+  post_2:
+    type: page
+    label: Post 2
+    folder: posts
+    match:
+      - render-latex-using-katex.md
+      - theme-demo.md
+      - twemoji-support.md
+    fields:
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: boolean
+        name: katex
+        label: Katex
+      - type: list
+        name: series
+        label: Series
+        items:
+          type: string
+      - type: list
+        name: images
+        label: Images
+        items:
+          type: image
+      - type: boolean
+        name: math
+        label: Math
+      - type: list
+        name: authors
+        label: Authors
+        items:
+          type: string
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - snippets/_index.md
+      - snippets/first/index.md
+      - snippets/second/index.md
+      - about.md
+      - about.pt-br.md
+      - contact.md
+      - contact.pt-br.md
+      - projects.md
+      - projects.pt-br.md
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: slug
+        label: Slug
